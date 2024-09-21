@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Assets/CSS/register.css">
+    <title>Register</title>
+</head>
+<body>
+<header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="register.html">Register</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="about.html">About Us</a></li>
+        </ul>
+    </nav>
+</header>
+<main>
+    <div class="container">
+        <h1>Register</h1>
+        <form id="registration-form">
+            <fieldset>
+                <legend>Personal Information</legend>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your full name" required minlength="3" maxlength="50"><br>
+
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="dob" required><br>
+
+                <label for="gender">Gender:</label>
+                <select id="gender" name="gender" required>
+                    <option value="">Select</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select><br>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="example@example.com" required><br>
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" placeholder="Enter a strong password" required minlength="8"><br>
+
+                <label for="confirm_password">Confirm Password:</label>
+                <input type="password" id="confirm_password" name="confirm_password" placeholder="Re-enter password" required><br>
+            </fieldset>
+
+            <fieldset>
+                <legend>Education</legend>
+                <label for="degree">Degree:</label>
+                <input type="text" id="degree" name="degree" placeholder="Enter your degree" required><br>
+
+                <label for="university">University:</label>
+                <input type="text" id="university" name="university" placeholder="Enter your university name" required><br>
+
+                <label for="year">Year of Graduation:</label>
+                <input type="number" id="year" name="year" placeholder="e.g., 2024" min="1900" max="2099" required><br>
+            </fieldset>
+
+            <fieldset>
+                <legend>Contact Information</legend>
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" name="phone" placeholder="123-456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required><br>
+
+                <label for="address">Address:</label>
+                <textarea id="address" name="address" placeholder="Enter your full address" rows="4" required></textarea><br>
+
+                <label for="country">Country:</label>
+                <select id="country" name="country" required>
+                    <option value="">Select your country</option>
+                    <option value="india">India</option>
+                    <option value="usa">USA</option>
+                    <option value="canada">Canada</option>
+                    <option value="uk">UK</option>
+                    <!-- Add more countries as needed -->
+                </select><br>
+            </fieldset>
+
+            <fieldset>
+                <legend>Agreements</legend>
+                <label for="terms">
+                    <input type="checkbox" id="terms" name="terms" required>
+                    I agree to the <a href="#">Terms and Conditions</a>.
+                </label><br>
+
+                <label for="newsletter">
+                    <input type="checkbox" id="newsletter" name="newsletter">
+                    Subscribe to our newsletter.
+                </label><br>
+            </fieldset>
+
+            <button type="submit">Register</button>
+        </form>
+    </div>
+</main>
+<footer>
+    <p>&copy; 2024 Campus Connect</p>
+</footer>
+
+<script src="/Assets/JS/register.js"></script>
+</body>
+</html>
